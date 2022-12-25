@@ -1,0 +1,12 @@
+[package]
+name = "cpstest"
+version = "1.0"
+description = "Simple program of cps test"
+authors = ["Exatoon27", "Roberto Cantú"]
+edition = "2021"
+publish = false
+repository = "https://github.com/Exatoon27/cpstest"
+license = "GNU-GPL-3"
+
+[dependencies]
+gtk = { version = "0.5.4", package = "gtk4" }

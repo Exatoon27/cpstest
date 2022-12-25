@@ -1,0 +1,33 @@
+.body{
+    background-color: rgba(184, 184, 184, 0.8);
+    border: 1px solid rgba(209, 213, 219, 0.3);
+    border-radius: 0 0 15px 15px;
+}
+
+.label {    
+    font-size: large;
+    font-weight: 700;
+    color: #000;
+}
+
+.counter {
+    font-size: large;
+    background-color: rgba(184, 184, 184, 1);
+    color: #000;
+    border: 3px solid rgba(209, 213, 219, 1);
+    border-radius: 15px;
+}
+
+.button-on {
+    font-size: large;
+    color: #000;
+    background-color: rgba(120, 255, 194, 1);
+    border-radius: 15px;
+}
+
+.button-off {
+    font-size: large;
+    color: #000;
+    background-color: rgb(255, 120, 120);
+    border-radius: 15px;
+}
