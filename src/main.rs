@@ -46,7 +46,7 @@ fn build_ui(app: &Application) {
     clicks_name.add_css_class("label");
     
     let time_name = Label::builder()
-        .label("Tiempo")
+        .label("Time")
         .margin_start(12)
         .margin_end(12)
         .width_request(160)
@@ -118,6 +118,7 @@ fn build_ui(app: &Application) {
                 });
             }
     }));
+
     receiver.attach(
         None,
         clone!(@weak time_label, @weak button_add, @weak button_reset => @default-return Continue(false),
@@ -135,6 +136,7 @@ fn build_ui(app: &Application) {
                     }
         ),
     );
+
     button_reset.connect_clicked(clone!(@weak clicks_label, @weak time_label, @weak button_add =>
         move |_| {
             clicks.set(0);
@@ -184,7 +186,7 @@ fn build_ui(app: &Application) {
 
     let window = ApplicationWindow::builder()
         .application(app)
-        .title("Test de cps")
+        .title("CPS Test")
         .child(&main_box)
         .resizable(false)
         .build();

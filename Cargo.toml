@@ -1,6 +1,6 @@
 [package]
 name = "cpstest"
-version = "1.0"
+version = "1.0.0"
 description = "Simple program of cps test"
 authors = ["Exatoon27"]
 edition = "2021"
