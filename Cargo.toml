@@ -2,7 +2,7 @@
 name = "cpstest"
 version = "1.0"
 description = "Simple program of cps test"
-authors = ["Exatoon27", "Roberto Cantú"]
+authors = ["Exatoon27"]
 edition = "2021"
 publish = false
 repository = "https://github.com/Exatoon27/cpstest"
