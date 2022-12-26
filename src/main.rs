@@ -11,13 +11,11 @@ use gtk::{self, gdk, glib, Application, ApplicationWindow, Box, Label, Button, O
 const APP_ID: &str = "org.gtk_rs.GObjectMemoryManagement4";
 
 fn main() {
-    // Create a new application
     let app = Application::builder().application_id(APP_ID).build();
 
     app.connect_startup(|_| load_css());
     app.connect_activate(build_ui);
 
-    // Run the application
     app.run();
 }
 
@@ -34,7 +32,6 @@ fn load_css() {
 
 fn build_ui(app: &Application) {
 
-    // Reference-counted object with inner mutability
     let clicks = Rc::new(Cell::new(0));
     let started = Rc::new(Cell::new(1));
 
@@ -78,7 +75,6 @@ fn build_ui(app: &Application) {
 
     time_label.add_css_class("counter");
 
-    // Create two buttons
     let button_add = Button::builder()
         .label("Start")
         .margin_top(12)
@@ -103,8 +99,6 @@ fn build_ui(app: &Application) {
 
     button_reset.add_css_class("button-on");
 
-    // Connect callbacks
-    // When a button is clicked, `number` and label of the other button will be changed
     let (sender, receiver) = MainContext::channel(PRIORITY_DEFAULT);
     button_add.connect_clicked(clone!(@weak clicks, @weak clicks_label, @weak button_reset =>
         move |button_add| {
@@ -151,7 +145,6 @@ fn build_ui(app: &Application) {
             button_add.remove_css_class("button-off");
     }));
 
-    // Add buttons to `gtk_box`
     let button_box = Box::builder()
         .orientation(Orientation::Horizontal)
         .build();
@@ -189,7 +182,6 @@ fn build_ui(app: &Application) {
     main_box.append(&counter_box);
     main_box.append(&button_box);
 
-    // Create a window
     let window = ApplicationWindow::builder()
         .application(app)
         .title("Test de cps")
@@ -199,6 +191,5 @@ fn build_ui(app: &Application) {
 
     window.add_css_class("body");
 
-    // Present the window
     window.present();
 }
