@@ -20,7 +20,7 @@ If you only want to try, download it from the releases section. But, if your goa
 
 ## Screenshot
 
-[](https://github.com/Exatoon27/cpstest/blob/master/git-assets/screenshot.png)
+![](https://github.com/Exatoon27/cpstest/blob/master/git-assets/screenshot.png)
 
 # 
 Note: Probably, the repository won't be updated for a long time because it is only a small project.
